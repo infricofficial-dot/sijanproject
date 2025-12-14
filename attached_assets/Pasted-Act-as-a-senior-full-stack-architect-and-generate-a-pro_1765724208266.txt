@@ -1,0 +1,116 @@
+Act as a senior full-stack architect and generate a production-ready, enterprise-grade e-commerce platform.
+
+TECH STACK (STRICT):
+- Frontend: Next.js (App Router), TypeScript, Tailwind CSS
+- Backend: Next.js API routes (server actions where applicable)
+- Database: PostgreSQL (Prisma ORM)
+- Authentication: NextAuth (Credentials + Email), JWT, role-based access
+- Payments: eSewa (LIVE integration, Nepal)
+- State: Server Components + React Query
+- Validation: Zod
+- Security: CSRF, rate limiting, secure cookies, hashing (bcrypt)
+- Deployment ready for Replit + Vercel
+
+FUNCTIONAL REQUIREMENTS (NO MOCKS, REAL IMPLEMENTATION):
+
+1. AUTHENTICATION & USER MANAGEMENT
+- User registration with email verification
+- Login / Logout
+- Forgot password (email token, expiry)
+- Reset password
+- Change password
+- Role-based access (ADMIN / CUSTOMER)
+- Secure session handling
+- Audit timestamps (createdAt, updatedAt, lastLogin)
+
+2. PRODUCT MANAGEMENT
+- Admin CRUD for products
+- Categories, subcategories
+- Product variants (size, color)
+- Stock management
+- Product images (cloud-ready)
+- Pricing, discounts, taxes
+- Product search, filter, pagination
+
+3. CART & CHECKOUT
+- Persistent cart (DB-based, user & guest merge)
+- Quantity updates
+- Coupon support
+- Shipping calculation
+- Order summary before payment
+
+4. PAYMENT (ONLY eSewa – REAL FLOW)
+- eSewa live payment integration
+- Success, failure, cancel callbacks
+- Secure payment verification
+- Store transaction reference IDs
+- Prevent double payments
+- Nepal currency (NPR)
+
+5. ORDER MANAGEMENT
+- Order creation post-payment
+- Order status lifecycle:
+  - PENDING
+  - PAID
+  - PROCESSING
+  - SHIPPED
+  - DELIVERED
+  - CANCELLED
+- Order history per user
+- Admin order dashboard
+- Invoice generation
+
+6. ORDER TRACKING
+- Real-time order status
+- Tracking page by order ID
+- Timeline-based tracking UI
+
+7. DATABASE (REAL SCHEMA)
+- Users
+- Products
+- Categories
+- ProductVariants
+- Cart
+- CartItems
+- Orders
+- OrderItems
+- Payments
+- Coupons
+- Addresses
+- Reviews
+
+Use Prisma with proper relations, indexes, constraints, and migrations.
+
+8. UI / UX
+- Tailwind CSS only
+- Responsive, mobile-first
+- Admin dashboard
+- Customer dashboard
+- Clean, production-grade layouts
+
+9. CODE QUALITY
+- Modular folder structure
+- Reusable components
+- Environment variable support
+- Error handling & logging
+- Type-safe everywhere
+- Comments only where necessary
+
+10. OUTPUT REQUIREMENTS
+- Generate full project structure
+- Provide Prisma schema
+- Provide .env.example
+- Provide eSewa integration code
+- Provide setup instructions
+- Code must be deployable without refactor
+
+IMPORTANT CONSTRAINTS:
+- No mock APIs
+- No dummy payments
+- No Firebase
+- No MongoDB
+- No Stripe, PayPal, Khalti
+- eSewa ONLY
+- Production mindset only
+
+Deliver the complete solution end-to-end.
